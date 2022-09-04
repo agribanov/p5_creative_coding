@@ -7,17 +7,17 @@ function setup() {
     background(0);
 }
 
-function draw() {
-    // put drawing code here
-    background(0, 0.1);
+// function draw() {
+//     // put drawing code here
+//     background(0, 0.1);
 
-    let time = millis();
-    translate(width / 2, height / 2);
-    rotate(time / 1000);
+//     let time = millis();
+//     translate(width / 2, height / 2);
+//     rotate(time / 1000);
 
-    fill(frameCount % 360, 100, 50);
-    text('hello world', 0, 0);
-}
+//     fill(frameCount % 360, 100, 50);
+//     text('hello world', 0, 0);
+// }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
@@ -28,6 +28,6 @@ function windowResized() {
 
 function mouseClicked() {
     // saveCanvas('preview', 'png');
-    let fs = fullscreen();
-    fullscreen(!fs);
+    // let fs = fullscreen();
+    // fullscreen(!fs);
 }
