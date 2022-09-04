@@ -28,4 +28,6 @@ function windowResized() {
 
 function mouseClicked() {
     // saveCanvas('preview', 'png');
+    let fs = fullscreen();
+    fullscreen(!fs);
 }
