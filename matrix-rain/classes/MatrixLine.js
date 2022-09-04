@@ -1,7 +1,7 @@
 class MatrixLine {
     static DELAY = {
-        NEW_SYMBOL_DELAY_MAX: 50,
         NEW_SYMBOL_DELAY_MIN: 10,
+        NEW_SYMBOL_DELAY_MAX: 50,
         RESTART: 500,
     };
 
@@ -32,7 +32,10 @@ class MatrixLine {
         this.#reset();
 
         this.#addSymbol(
-            random(-MatrixLine.MAX_OFFSCREEN_SYMBOLS_COUNT * TEXT_SIZE, 0),
+            random(
+                -MatrixLine.MAX_OFFSCREEN_SYMBOLS_COUNT * PARAMS.TEXT_SIZE,
+                0
+            ),
             millis()
         );
     }
@@ -65,7 +68,7 @@ class MatrixLine {
 
         if (time - this.#newSymbolAddedAt > this.#newSymbolDelay) {
             const lastSymbol = this.#symbols[this.#symbols.length - 1];
-            const y = lastSymbol ? lastSymbol.y + TEXT_SIZE : 0;
+            const y = lastSymbol ? lastSymbol.y + PARAMS.TEXT_SIZE : 0;
             if (y > height) {
                 this.#stop();
             } else {

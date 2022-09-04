@@ -6,6 +6,7 @@ const pane = new Tweakpane.Pane({
 const actionsFolder = pane.addFolder({
     title: 'Actions',
 });
+
 actionsFolder
     .addButton({
         title: 'Toggle Fullscreen',
@@ -21,4 +22,12 @@ actionsFolder
     })
     .on('click', () => {
         saveCanvas('preview', 'png');
+    });
+
+actionsFolder
+    .addButton({
+        title: 'Restart',
+    })
+    .on('click', () => {
+        init();
     });
