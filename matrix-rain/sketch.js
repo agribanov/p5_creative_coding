@@ -35,6 +35,6 @@ function windowResized() {
 
 function mouseClicked() {
     // saveCanvas('MatrixPreview', 'png');
-    let fs = fullscreen();
-    fullscreen(!fs);
+    // let fs = fullscreen();
+    // fullscreen(!fs);
 }
