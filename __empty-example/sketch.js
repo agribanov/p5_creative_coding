@@ -21,5 +21,11 @@ function draw() {
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
+    background(0);
+
     textSize(width / 5);
+}
+
+function mouseClicked() {
+    // saveCanvas('preview', 'png');
 }
