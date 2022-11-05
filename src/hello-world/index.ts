@@ -1,1 +1,3 @@
-console.log('test hello world');
+import './index.css';
+import './src/sketch';
+import './src/pane';
