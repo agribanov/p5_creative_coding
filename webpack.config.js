@@ -2,6 +2,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { fileURLToPath } from 'url';
 import { globbySync } from 'globby';
 import path from 'path';
+import webpack from 'webpack';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -45,6 +46,9 @@ const config = {
     },
     plugins: [
         ...htmlPlugins,
+        new webpack.ProvidePlugin({
+            p5: 'p5',
+        }),
 
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/

@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.proxy": {
+        "enable": true,
+        "baseUri": "/kissfm",
+        "proxyUri": "https://online.kissfm.ua/"
+    }
+}
